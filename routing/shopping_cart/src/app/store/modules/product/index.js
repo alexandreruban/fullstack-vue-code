@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const state = {
-  productItems: [] 
+  productItems: []
 }
 
 const mutations = {
@@ -19,7 +19,10 @@ const actions = {
 }
 
 const getters = {
-  productItems: state => state.productItems
+  productItems: state => state.productItems,
+  productItemFromId: (state) => (id) => {
+    return state.productItems.find(productItem => productItem.id === id)
+  }
 }
 
 const productModule = {

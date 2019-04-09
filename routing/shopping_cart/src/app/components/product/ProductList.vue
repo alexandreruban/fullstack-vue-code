@@ -26,9 +26,6 @@ export default {
       'productItems'
     ])
   },
-  created() {
-    this.$store.dispatch('getProductItems');
-  },
   components: {
     ProductListItem
   }
